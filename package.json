@@ -1,12 +1,10 @@
 {
-  "name": "kudo's quicktask bot",
+  "name": "name of bot",
   "version": "1.0.0",
-  "description": "My own Discord bot",
+  "description": "Kudo's bot",
   "main": "bot.js",
   "author": "Kudo",
   "dependencies": {
-    "discord.io": "github:woor/discord.io#gateway_v6",
-    "winston": "^3.0.0",
-    "xmlhttprequest": "^1.8.0"
+    
   }
 }
