@@ -1,6 +1,6 @@
 
-//Kudo's discord quicktask bot v1.0
-//mimics keyboard shortcuts for eve 
+//Kudo's discord quicktask bot v2.0
+
 
 
 
@@ -28,16 +28,25 @@ bot.on('ready', function (evt) {
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
 
+    //change this to your key and pin
+    var key = 'kudo';
+    var pin = 'kudo';
+   
+   
     if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
         var url = args[1];
+        
+
+
+        
+        
        
         args = args.splice(1);
-        switch(cmd) {
-            // types of commands
-            case 'quicktask':
-                const link = 'http://127.0.0.1:5000/quicktask/'+ url;
+
+        if (cmd == 'quicktask') {
+            const link = 'http://everoboticslm.herokuapp.com/api/quick_task?key='+key+'&PIN='+pin+'&link='+url;
                 // fetch(link)
                 // .then(data=>{return data.json()})
                 // .then(res=>{console.log(res)})     not using anymore
@@ -52,9 +61,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Quick task request successful! Check your bot!'
                 });
-            break;
-            case 'masslink':
-                const mlink = 'http://127.0.0.1:5000/masslink/'+ url;
+            } else if (cmd == 'masslink') {
+                const mlink = 'http://everoboticslm.herokuapp.com/api/mass_edit?key='+key+'&PIN='+pin+'&link='+url;
                     // fetch(link)
                     // .then(data=>{return data.json()})
                     // .then(res=>{console.log(res)})
@@ -65,9 +73,43 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Mass link change request successful! Check your bot!'
                 });
-            break; 
+            } else if (cmd == 'update') {
+                var key = args[0];
+                var pin = args[1];
+                
 
-            //cyber, PD quick task and other functions to be added here
-         }
+
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'key= '+key+' pin= '+pin
+                });
+            } else if (cmd == 'show') {
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'key= '+key+' pin= '+pin
+                });
+            } 
+        // switch(cmd) {
+            
+        //     // types of commands
+        //     case 'quicktask':
+                
+        //     break;
+        //     case 'masslink':
+                
+        //     break; 
+        //     case 'update':
+                
+                
+        //     break; 
+        //     case 'show':
+                
+                
+
+                
+        //     break; 
+
+        //     //cyber, PD quick task and other functions to be added here
+        //  }
      }
 });
