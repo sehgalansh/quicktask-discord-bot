@@ -64,7 +64,14 @@ Open another window of the command prompt or open in powershell and navigate to 
 
 `flask run`
 
+Usage:
+Quicktask
 
+`!quicktask <url>`
+
+Mass link change
+
+`!masslink <url>`
 
 EVE NEEDS TO BE OPEN AND IN THE FOREGROUND FOR THIS TO WORK!
 ---
