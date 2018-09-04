@@ -1,0 +1,10 @@
+{
+  "name": "name of bot",
+  "version": "1.0.0",
+  "description": "Kudo's bot",
+  "main": "bot.js",
+  "author": "Kudo",
+  "dependencies": {
+    
+  }
+}
