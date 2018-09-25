@@ -47,9 +47,19 @@ Type:
 
 Your bot is ready!
 
-To start, open the node command prompt and navigate into the folder with the bot files and type
 
+ To start, open the node command prompt and navigate into the folder with the bot files and type
+ 
 `node bot.js`
+
+
+ Open another window of the command prompt or open in powershell and navigate to the same directory and type:
+ 
+ 
+`flask run`
+
+
+ EVE NEEDS TO BE OPEN AND IN THE FOREGROUND FOR THIS TO WORK!
 
 Usage:
 Quicktask
