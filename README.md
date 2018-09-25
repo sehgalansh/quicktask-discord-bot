@@ -25,10 +25,6 @@ Download Python 3.7 from https://www.python.org/downloads
 `pip install pyperclip`
 
 
-Download Node.js https://nodejs.org/en/download/
-Download Git from https://git-scm.com/download/win
-
-
 
 
 
